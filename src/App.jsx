@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Tutorials from "./components/Tutorials";
 import Examples from "./components/Examples";
-import Footer from "./components/footer";
+import Footer from "./components/Footer"; //updated footer
 
 
 const App = () => {
