@@ -1,12 +1,15 @@
-.Tutorials{
+.tutorials{
     align-items: center;
     background-color: #f7f7f7;
     padding: 60px 20px;
 }
 
-.Tutorials h2{
-    font-size: 32px;
+.tutorials h2{
+   font-size: 32px;
     margin-bottom: 40px;
+    align-items: center;
+    text-align: center;
+    
 }
 
 .cards{
