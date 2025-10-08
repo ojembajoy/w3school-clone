@@ -13,7 +13,7 @@
     color: white;
 }
 
-.logo{
+.logo a{
     font-size: 20px;
     font-weight: bold;
     color: #04aa60;
@@ -42,6 +42,7 @@ color:#04AA6D
 @media (max-width: 768px) {
     .hamburger{
         display: block;
+        color: white;
 
     }
     .navLinks {
