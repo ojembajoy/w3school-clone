@@ -1,6 +1,6 @@
 import React from "react";
 import styles from './Tutorials.module.css';
-import { motion } from "framer-motion";
+import { motion as M} from "framer-motion"
 import { useNavigate } from "react-router-dom";
 
 const Tutorials = () => {
@@ -40,7 +40,7 @@ const Tutorials = () => {
             <h2 className={styles.heading}>Start Learning</h2>
             <div className={styles.cardContainer}>
                 {cards.map((card, index) => (
-                    <motion.div
+                    <M.div
                     key={index}
                     className={styles.card}
                     style={{backgroundColor: card.color}}
@@ -52,7 +52,7 @@ const Tutorials = () => {
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>
                 <button onClick={() => navigate(card.to)} className={styles.btn}>Try Now {card.title}</button>
-                    </motion.div>
+                    </M.div>
                 ))}
             </div>
         </section>
