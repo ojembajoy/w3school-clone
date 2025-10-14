@@ -52,6 +52,7 @@ margin: auto;
 .links {
     display: flex;
     justify-content: center;
+    flex-wrap: frfr;
     gap: 15px;
     margin-bottom: 20px;
 }

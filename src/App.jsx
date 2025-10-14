@@ -27,6 +27,7 @@ const App = () => {
                <Route path='/react' element={<ReactPage />} />
                <Route path='/privacy' element={<Privacy />} />
                <Route path='/terms' element={<Terms />} />
+               
            </Routes>
              <Footer/>
         </BrowserRouter>

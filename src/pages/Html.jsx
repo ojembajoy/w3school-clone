@@ -18,11 +18,11 @@ export default function Html() {
         </div>
       
           <p className={styles.text}>HTML is the standard markup language for creating Web pages. It stands for Hyper Text Markup Language. HTML describes the structure of a Web page.</p>
-          <div className={styles.links}>
-            <a href="/html/introduction">Introduction</a>
-            <a href="/html/elements">HTML Elements</a>
-            <a href="/html/attributes">HTML Attributes</a>
-          </div>
+          <ul className={styles.links}>
+           <li> <a href="/html/introduction">Introduction</a></li>
+           <li> <a href="/html/elements">HTML Elements</a></li>
+           <li> <a href="/html/attributes">HTML Attributes</a></li>
+          </ul>
         </div>
         
       </Banner>
