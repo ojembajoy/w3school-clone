@@ -8,6 +8,7 @@ import CSS from "./pages/CSS";
 import JavaScript from "./pages/JavaScript";
 import ReactPage from "./pages/ReactPage";
 import Terms from "./pages/Terms";
+import TryNow from "./pages/TryNow";
 import Privacy from "./pages/Privacy";
 
 
@@ -17,7 +18,6 @@ const App = () => {
     return (
         <BrowserRouter>
            <Navbar/>
-            
            
            <Routes>
               <Route path='/' element={<HomePage />} />
@@ -26,6 +26,7 @@ const App = () => {
                <Route path='/javascript' element={<JavaScript />} />
                <Route path='/react' element={<ReactPage />} />
                <Route path='/privacy' element={<Privacy />} />
+               <Route path='/tryit' element={<TryNow />} />
                <Route path='/terms' element={<Terms />} />
                
            </Routes>

@@ -1,14 +1,19 @@
+import { } from "framer-motion/client";
 import Banner from "../components/Banner";
 import styles from "./Html.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
+
 export default function Html() {
   return (
 
      <>
-      <Banner className={styles.banner}>
-        <div className="container">
+      
+     
+       <Banner>
+         <div style={{ padding: "80px", textAlign: "center" }}>
+           <div className={styles.container}>
            <div className={styles.topic}>
           <h1>HTML Tutorial</h1>
          </div>
@@ -17,15 +22,34 @@ export default function Html() {
           <button className={styles.btn} >Next<IoIosArrowForward /></button>
         </div>
       
-          <p className={styles.text}>HTML is the standard markup language for creating Web pages. It stands for Hyper Text Markup Language. HTML describes the structure of a Web page.</p>
+       <div style={{ padding: "80px", textAlign: "center" }}>
+      <h1>Learn HTML</h1>
+      <p>HTML is the structure of every webpage — it defines elements like headings, images, and links.</p>
+      <a
+        href="/tryit"
+        style={{
+          color: "white",
+          padding: "10px 20px",
+          borderRadius: "5px",
+          textDecoration: "none",
+          marginTop: "20px",
+        }}
+      >
+         <p className={styles.text2}>Try It Yourself</p>
+
+      </a>
+    </div>
+          
           <ul className={styles.links}>
            <li> <a href="/html/introduction">Introduction</a></li>
            <li> <a href="/html/elements">HTML Elements</a></li>
            <li> <a href="/html/attributes">HTML Attributes</a></li>
           </ul>
         </div>
-        
-      </Banner>
+
+    </div>
+       </Banner>
+            
 
      </>
   )
