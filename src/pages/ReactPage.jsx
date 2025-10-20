@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom";
 import Banner from "../components/Banner";
 import styles from "./ReactPage.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 
 export default function ReactPage() {
+  const navigate = useNavigate();
   return (
     <>
 
@@ -24,8 +26,8 @@ export default function ReactPage() {
         <div style={{ padding: "80px", textAlign: "center" }}></div>
       <h1>Learn React</h1>
       <p>React is a JavaScript library for building user interfaces. It allows you to create reusable UI components.</p>
-      <a
-        href="/tryit"
+      <button
+        onClick={()=>navigate('/tryit')}
         style={{
           color: "white",
           padding: "10px 20px",
@@ -37,7 +39,7 @@ export default function ReactPage() {
       <p className={styles.text2}>Try It Yourself</p>
 
 
-      </a>
+      </button>
     </div>
     </div>
 </Banner>

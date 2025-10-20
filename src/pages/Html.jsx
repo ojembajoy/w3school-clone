@@ -3,9 +3,11 @@ import Banner from "../components/Banner";
 import styles from "./Html.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
+import { useNavigate } from "react-router-dom";
 
 
 export default function Html() {
+  const navigate = useNavigate();
   return (
 
      <>
@@ -25,8 +27,8 @@ export default function Html() {
        <div style={{ padding: "80px", textAlign: "center" }}>
       <h1>Learn HTML</h1>
       <p>HTML is the structure of every webpage — it defines elements like headings, images, and links.</p>
-      <a
-        href="/tryit"
+      <button
+        onClick={()=>navigate('/tryit')}
         style={{
           color: "white",
           padding: "10px 20px",
@@ -37,7 +39,7 @@ export default function Html() {
       >
          <p className={styles.text2}>Try It Yourself</p>
 
-      </a>
+      </button>
     </div>
           
           <ul className={styles.links}>

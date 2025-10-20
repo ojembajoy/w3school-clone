@@ -3,9 +3,11 @@ import styles from "./Css.module.css";
 import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Banner from '../components/Banner';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function CSS() {
+  const navigate = useNavigate();
   return (
 <>
 
@@ -27,8 +29,8 @@ export default function CSS() {
     <div style={{ padding: "80px", textAlign: "center" }}>
       <h1>Learn CSS</h1>
       <p>CSS makes your website beautiful — it controls colors, layouts, and animations.</p>
-      <a
-        href="/tryit"
+      <button
+        onClick={()=>navigate('/tryit')}
         style={{
           color: "white",
           padding: "10px 20px",
@@ -38,7 +40,7 @@ export default function CSS() {
       >
          <div className={styles.text2}>Try It Yourself</div>
          
-      </a>
+      </button>
     </div>
 
      <ul className={styles.links}>
