@@ -4,10 +4,8 @@ import Tutorials from "../components/Tutorials";
 
 const HomePage = () => {
     return (
-        <div>
+        <div style={{height:"100%"}}>
             <Hero />
-           <Examples/>
-                 <Tutorials/>
                  
         </div>
     );

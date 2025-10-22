@@ -6,16 +6,16 @@ const Examples = () => {
     const navigate= useNavigate();
     const examples = [
         {title: "HTML Example",
-        to: "/html"},
+        to: "/tutorialpage"},
         
         {title: "CSS Example",
-        to: "/css"},
+        to: "/tutorialpage"},
         
         {title: "JavaScript Example",
-        to: "/javascript"},
+        to:"/tutorialpage"},
         
         {title: "React Example",
-        to: "/react"},
+        to:"/tutorialpage"},
     ];
 
     return (

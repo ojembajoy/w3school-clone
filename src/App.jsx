@@ -10,15 +10,18 @@ import ReactPage from "./pages/ReactPage";
 import Terms from "./pages/Terms";
 import TryNow from "./pages/TryNow";
 import Privacy from "./pages/Privacy";
-
-
+import ExamplesPage from "./pages/ExamplesPage";
+import TutorialPage from "./pages/TutorialPage";
+import styles from './App.module.css'
 
 const App = () => {
 
     return (
+        <div className={styles.app}>
+
         <BrowserRouter>
            <Navbar/>
-           
+           <main>
            <Routes>
               <Route path='/' element={<HomePage />} />
                <Route path='/html' element={<Html />} />
@@ -28,10 +31,14 @@ const App = () => {
                <Route path='/privacy' element={<Privacy />} />
                <Route path='/tryit' element={<TryNow />} />
                <Route path='/terms' element={<Terms />} />
-               
+               <Route path="/reactpage" element={<ReactPage />} />
+               <Route path="/examplespage" element={<ExamplesPage />} />
+               <Route path="/tutorialpage" element={<TutorialPage />} />
            </Routes>
+           </main>
              <Footer/>
         </BrowserRouter>
+        </div>
     );
 };
 

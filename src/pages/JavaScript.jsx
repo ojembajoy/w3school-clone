@@ -18,8 +18,8 @@ export default function JavaScript() {
                 <h1>JavaScript Tutorial</h1>
                </div>
               <div className={styles.buttons}>
-                <button className={styles.btn} ><IoIosArrowBack /> Home</button>
-                <button className={styles.btn} >Next<IoIosArrowForward /></button>
+                <button onClick={() => navigate('/')} className={styles.btn} ><IoIosArrowBack /> Home</button>
+                <button onClick={() => navigate('/ReactPage')} className={styles.btn} >Next<IoIosArrowForward /></button>
               </div>
             
              <div style={{ padding: "80px", textAlign: "center" }}>
@@ -39,11 +39,7 @@ export default function JavaScript() {
             </button>
           </div>
                 
-                <ul className={styles.links}>
-                 <li> <a href="/html/introduction">Introduction</a></li>
-                 <li> <a href="/html/elements">HTML Elements</a></li>
-                 <li> <a href="/html/attributes">HTML Attributes</a></li>
-                </ul>
+               
               </div>
       
           </div>

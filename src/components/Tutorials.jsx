@@ -51,7 +51,7 @@ const Tutorials = () => {
                     >
                 <h3>{card.title}</h3>
                 <p>{card.desc}</p>
-                <button onClick={() => navigate(card.to)} className={styles.btn}>Try Now {card.title}</button>
+                <button onClick={() => navigate(card.to)} className={styles.btn}>{card.title}</button>
                     </M.div>
                 ))}
             </div>

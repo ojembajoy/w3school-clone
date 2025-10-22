@@ -12,6 +12,12 @@ const Footer = () => {
                 <a href="#">Terms</a>
                 <a href="#">Contact</a>
             </div>
+
+            <ul className={styles.links}>
+                 <li> <a href="/introduction">Introduction</a></li>
+                 <li> <a href="/elements"> Elements</a></li>
+                 <li> <a href="/attributes"> Attributes</a></li>
+                </ul> 
         </footer>
     );
 };

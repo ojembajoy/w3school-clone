@@ -49,13 +49,7 @@ margin: auto;
     background-color: lightgreen;
     color: white;
 }
-.links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: frfr;
-    gap: 15px;
-    margin-bottom: 20px;
-}
+
 
 .text2 {
     font-size: 18px;
@@ -75,4 +69,28 @@ margin: auto;
 .text2:hover {
     color: rgb(134, 157, 134);
     cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .text {
+        width: 90%;
+        min-width: auto;
+    }
+
+
+    .text2 {
+        width: auto;
+        padding: 0 20px;
+    }
+
+    .buttons {
+    padding: 0 10px;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+       
+    }
 }

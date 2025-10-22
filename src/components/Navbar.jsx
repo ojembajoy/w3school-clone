@@ -13,7 +13,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <div className={styles.logo}><a href='/'>W3 School</a></div>
+      <div className={styles.logo}><a href='/'>NjSchool</a></div>
 
       <div className={styles.hamburger} onClick={toggleMenu}>
       <GiHamburgerMenu />

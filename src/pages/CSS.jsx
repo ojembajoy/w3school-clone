@@ -21,8 +21,8 @@ export default function CSS() {
              <h1>CSS Tutorial</h1>
             </div>
            <div className={styles.buttons}>
-             <button className={styles.btn} ><IoIosArrowBack /> Home</button>
-             <button className={styles.btn} >Next<IoIosArrowForward /></button>
+             <button onClick={() => navigate('/')} className={styles.btn} ><IoIosArrowBack /> Home</button>
+             <button onClick={() => navigate('/JavaScript')} className={styles.btn} >Next<IoIosArrowForward /></button>
            </div>
 
 
@@ -43,11 +43,7 @@ export default function CSS() {
       </button>
     </div>
 
-     <ul className={styles.links}>
-               <li> <a href="/html/introduction">Introduction</a></li>
-               <li> <a href="/html/elements">HTML Elements</a></li>
-               <li> <a href="/html/attributes">HTML Attributes</a></li>
-              </ul>
+     
    </div>
     
    </div>

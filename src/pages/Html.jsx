@@ -20,8 +20,8 @@ export default function Html() {
           <h1>HTML Tutorial</h1>
          </div>
         <div className={styles.buttons}>
-          <button className={styles.btn} ><IoIosArrowBack /> Home</button>
-          <button className={styles.btn} >Next<IoIosArrowForward /></button>
+          <button className={styles.btn} onClick={()=>navigate('/')} ><IoIosArrowBack /> Home</button>
+          <button className={styles.btn} onClick={()=>navigate('/CSS')} >Next<IoIosArrowForward /></button>
         </div>
       
        <div style={{ padding: "80px", textAlign: "center" }}>
@@ -42,11 +42,7 @@ export default function Html() {
       </button>
     </div>
           
-          <ul className={styles.links}>
-           <li> <a href="/html/introduction">Introduction</a></li>
-           <li> <a href="/html/elements">HTML Elements</a></li>
-           <li> <a href="/html/attributes">HTML Attributes</a></li>
-          </ul>
+          
         </div>
 
     </div>

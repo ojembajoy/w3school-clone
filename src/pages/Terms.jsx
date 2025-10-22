@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Terms() {
+
+ function Terms() {
   return (
     <div>
      
@@ -19,3 +20,4 @@ export default function Terms() {
     </div>
   )
 }
+export default Terms;
