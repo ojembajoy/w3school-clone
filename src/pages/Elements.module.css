@@ -1,0 +1,169 @@
+.containerPage {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #f9f9f9;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+
+  /* 👇 Added animation */
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+
+/* 📝 Text section */
+.text {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.text h1 {
+  font-size: 2rem;
+  color: #04aa6d;
+  margin-bottom: 10px;
+  max-width: 100%;
+  margin-top: 25px;
+}
+
+.text p {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* 📖 List styling */
+ul {
+  margin: 20px 0;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+strong {
+  color: #04aa6d;
+}
+
+/* 💡 Code Example */
+pre {
+  background-color: #1e1e1e;
+  color: #f1f1f1;
+  padding: 15px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.3);
+}
+
+/* 🚀 Button */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  background-color: #04aa6d;
+  color: #fff;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.btn:hover {
+  background-color: #03a05f;
+  transform: scale(1.06);
+  box-shadow: 0 0 20px rgba(4, 170, 109, 0.6);
+  animation: pulse 1.5s infinite;
+}
+
+/* 💫 Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 📱 Responsive for tablets */
+@media (max-width: 900px) {
+  .containerPage {
+    margin: 30px 20px;
+    padding: 20px;
+  }
+
+  .text h1 {
+    font-size: 1.8rem;
+  }
+
+  pre {
+    font-size: 0.9rem;
+  }
+}
+
+/* 📱 Responsive for phones */
+@media (max-width: 600px) {
+  .containerPage {
+    padding: 15px;
+  }
+
+  .text h1 {
+    font-size: 1.5rem;
+  }
+
+  .text p,
+  li,
+  pre {
+    font-size: 0.9rem;
+  }
+
+  .btn {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(4, 170, 109, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 12px rgba(4, 170, 109, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(4, 170, 109, 0);
+  }
+}
+
+/* 💫 Optional ripple effect */
+.btn::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  width: 120%;
+  height: 120%;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  pointer-events: none;
+}
+
+.btn:active::after {
+  transform: translate(-50%, -50%) scale(1);
+}

@@ -1,0 +1,389 @@
+/* 🌍 Container */
+.introduction {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  background-color: #fdfdfd;
+  color: #333;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  font-family: "Poppins", sans-serif;
+  line-height: 1.7;
+  animation: fadeInUp 0.8s ease-out forwards;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* ✨ Fade-in animation */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🧠 Headings */
+.introduction h1 {
+  font-size: 2rem;
+  color: #04aa6d;
+  margin-bottom: 15px;
+  text-align: center;
+  margin-top: 25px;
+}
+
+.introduction h2 {
+  font-size: 1.4rem;
+  color: #04aa6d;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+/* 📝 Paragraphs */
+.introduction p {
+  font-size: 1.05rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* 📖 List */
+.introduction ul {
+  margin: 10px 0 20px 20px;
+  padding-left: 20px;
+}
+
+.introduction li {
+  margin-bottom: 10px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* 🚀 Button */
+.introduction button {
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: block;
+  margin: 20px auto 0;
+}
+
+/* 🪄 Hover effects */
+.introduction button:hover {
+  background-color: #038a5a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(4, 170, 109, 0.6);
+}
+
+/* 📱 Tablet responsive */
+@media (max-width: 900px) {
+  .introduction {
+    margin: 40px 25px;
+    padding: 25px;
+  }
+
+  .introduction h1 {
+    font-size: 1.8rem;
+  }
+
+  .introduction h2 {
+    font-size: 1.3rem;
+  }
+
+  .introduction p {
+    font-size: 1rem;
+  }
+}
+
+/* 📱 Mobile responsive */
+@media (max-width: 600px) {
+  .introduction {
+    padding: 18px;
+    margin: 30px 15px;
+  }
+
+  .introduction h1 {
+    font-size: 1.6rem;
+  }
+
+  .introduction h2 {
+    font-size: 1.2rem;
+  }
+
+  .introduction p,
+  .introduction li {
+    font-size: 0.95rem;
+  }
+
+  .introduction button {
+    width: 100%;
+    padding: 14px;
+    font-size: 0.95rem;
+  }
+}
+
+/* 🌟 MODAL OVERLAY */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+/* 📦 MODAL BOX */
+.modalContent {
+  background: #fff;
+  color: #333;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+
+  /* 👇 upgraded animation */
+  opacity: 0;
+  transform: scale(0.8);
+  animation: zoomIn 0.4s ease forwards;
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🧠 Form section (unchanged, keep this if you already have it) */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form input:focus {
+  border-color: #04aa6d;
+}
+
+.form button {
+  background-color: #04aa6d;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.form button:hover {
+  background-color: #038a5a;
+  transform: scale(1.05);
+}
+
+/* ❌ Close button */
+.closeBtn {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1rem;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.closeBtn:hover {
+  color: #04aa6d;
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes zoomIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 📱 Responsive Modal */
+@media (max-width: 600px) {
+  .modalContent {
+    padding: 20px;
+    width: 90%;
+  }
+
+  .form input {
+    font-size: 0.9rem;
+  }
+
+  .form button {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🌟 Success message */
+.successMessage {
+  animation: fadeIn 0.6s ease forwards;
+  text-align: center;
+  color: #04aa6d;
+  padding: 20px;
+}
+
+.successMessage h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.successMessage p {
+  font-size: 1rem;
+  color: #333;
+}
+.successMessage button {
+  margin-top: 15px;
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.successMessage button:hover {
+  background-color: #038a5a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(4, 170, 109, 0.6);
+}
+/* 📱 Responsive Success Message */
+@media (max-width: 600px) {
+  .successMessage h2 {
+    font-size: 1.2rem;
+  }
+
+  .successMessage p {
+    font-size: 0.9rem;
+  }
+
+  .successMessage button {
+    font-size: 0.9rem;
+  }
+}
+
+/* 🚫 Error message */
+.errorMessage {
+  color: #d9534f;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  margin-top: 8px;
+  animation: fadeIn 0.3s ease;
+}
+.errorMessage p {
+  margin: 0;
+}
+.errorMessage p strong {
+  font-weight: bold;
+}
+.errorMessage p span {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.85rem;
+}
+.errorMessage p span a {
+  color: #d9534f;
+  text-decoration: underline;
+}
+.errorMessage p span a:hover {
+  color: #c9302c;
+}
+/* 📱 Responsive Error Message */
+@media (max-width: 600px) {
+  .errorMessage {
+    font-size: 0.85rem;
+  }
+
+  .errorMessage p span a {
+    font-size: 0.85rem;
+  }
+}
+.introduction h1 {
+  font-size: 2rem;
+}
+.introduction h2 {
+  font-size: 1.5rem;
+}
+.introduction p {
+  font-size: 1rem;
+}
+.introduction ul {
+  list-style: disc;
+  padding-left: 20px;
+}
+.introduction button {
+  background-color: #04aa6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.introduction button:hover {
+  background-color: #038a5a;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(4, 170, 109, 0.6);
+}
+@media (max-width: 600px) {
+  .introduction h1 {
+    font-size: 1.6rem;
+  }
+  .introduction h2 {
+    font-size: 1.3rem;
+  }
+  .introduction p {
+    font-size: 0.95rem;
+  }
+  .introduction button {
+    width: 100%;
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}

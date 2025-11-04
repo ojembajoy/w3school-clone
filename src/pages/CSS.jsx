@@ -4,6 +4,7 @@ import { IoIosArrowBack } from "react-icons/io";
 import { IoIosArrowForward } from "react-icons/io";
 import Banner from '../components/Banner';
 import { useNavigate } from 'react-router-dom';
+import { } from "framer-motion/client";
 
 
 export default function CSS() {
@@ -15,7 +16,7 @@ export default function CSS() {
 <Banner>
       <div style={{ padding: "80px", textAlign: "center" }}>
 
-   <div className={styles.container}>
+   <div className={styles.editorContainer}>
 
 <div className={styles.topic}>
              <h1>CSS Tutorial</h1>

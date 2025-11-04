@@ -7,9 +7,9 @@ const navigate=  useNavigate()
   return (
     <section className={styles.hero}>
       <div className={styles.content}>
-         <h1>Learn to code with W3Schools </h1>
+         <h1>Learn to code with NjSchools </h1>
         <p>
-          W3Schools is the world's lagest web developer site.
+          NjSchools is the world's lagest web developer site.
           Learn HTML, CSS, JavaScript, Python, React, and more - all in one place.
         </p>
         <button onClick={()=>navigate('/examplesPage')} className={styles.btn}>Start Learning</button>

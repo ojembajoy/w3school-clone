@@ -1,6 +1,7 @@
 import React from "react";
 
-export default function Privacy() {
+
+ function Privacy() {
   return (
     <div>
      
@@ -19,3 +20,4 @@ export default function Privacy() {
     </div>
   )
 }
+export default Privacy;

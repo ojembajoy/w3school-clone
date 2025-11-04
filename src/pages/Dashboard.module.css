@@ -1,0 +1,177 @@
+.headerSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  background: #04aa6d;
+  color: white;
+  border-radius: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+  box-shadow: 0 4px 10px rgba(4, 170, 109, 0.4);
+  animation: popIn 0.4s ease-in-out;
+}
+
+.userIntro {
+  text-align: left;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 📱 Responsive for smaller screens */
+@media (max-width: 600px) {
+  .headerSection {
+    flex-direction: column;
+  }
+
+  .avatar {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .userIntro {
+    text-align: center;
+  }
+}
+
+
+.dashboard {
+  max-width: 900px;
+  margin: 40px auto;
+  text-align: center;
+  padding: 30px;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.dashboard h1 {
+  color: #04aa6d;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  color: #444;
+  font-size: 1rem;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.card h2 {
+  color: #04aa6d;
+  margin-bottom: 15px;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  line-height: 1.8;
+}
+
+.logoutBtn {
+  background: #ff5c5c;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.logoutBtn:hover {
+  background: #e04343;
+}
+
+.learnSection {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 25px;
+}
+
+.learnSection h2 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.buttons button {
+  background: #04aa6d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+.buttons button:hover {
+  background: #038f5c;
+  transform: scale(1.05);
+}
+
+/* 📱 Responsive for Mobile */
+@media (max-width: 600px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .buttons {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .buttons button {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

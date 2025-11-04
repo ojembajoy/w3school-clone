@@ -1,0 +1,153 @@
+.loginContainer {
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  background-color: #fdfdfd;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.loginContainer h1 {
+  color: #04aa6d;
+  margin-bottom: 10px;
+}
+
+.loginContainer p {
+  color: #444;
+  font-size: 14px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+input {
+  margin: 8px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus {
+  border-color: #04aa6d;
+  box-shadow: 0 0 5px rgba(4, 170, 109, 0.3);
+}
+
+.submitBtn {
+  background: #04aa6d;
+  color: white;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 12px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background: #038f5c;
+}
+
+.error {
+  color: red;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+.toggleText {
+  margin-top: 20px;
+  color: #333;
+  font-size: 14px;
+}
+
+.toggleText span {
+  color: #04aa6d;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.toggleText span:hover {
+  color: #038f5c;
+}
+
+/* ✨ Mobile Responsive */
+@media (max-width: 600px) {
+  .loginContainer {
+    width: 90%;
+    padding: 20px;
+  }
+
+  input {
+    font-size: 14px;
+  }
+
+  .submitBtn {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ✅ Input validation feedback */
+input.valid {
+  border: 2px solid #04aa6d;
+  background: #f9fff9;
+}
+
+input.invalid {
+  border: 2px solid #ff5c5c;
+  background: #fff5f5;
+}
+
+/* Small helper text below inputs */
+.hint {
+  font-size: 12px;
+  color: #999;
+  text-align: left;
+  margin-top: -5px;
+  margin-bottom: 5px;
+}
+
+/* Slight bounce when valid */
+@keyframes popValid {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+input.valid {
+  animation: popValid 0.15s ease-in-out;
+}
+/* Slight shake when invalid */
+@keyframes shakeInvalid {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}

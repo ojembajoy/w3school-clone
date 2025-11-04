@@ -1,0 +1,183 @@
+/* 🌍 MAIN LAYOUT */
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  background-color: #1e1e1e;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+/* 🧩 LEFT SIDE: EDITOR */
+.editorSection {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.editorTitle {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #444;
+}
+
+.tabButton {
+  flex: 1;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.tabButton:hover {
+  background: #444;
+}
+
+.tabButton.active {
+  background: #04aa6d;
+  transform: scale(1.03);
+}
+
+/* CodeMirror container */
+.codeEditor {
+  height: 400px;
+}
+
+/* Run button */
+.runButton {
+  background: #04aa6d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  align-self: flex-start;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.runButton:hover {
+  background: #038a5a;
+  transform: scale(1.05);
+}
+
+/* 🧩 RIGHT SIDE: OUTPUT */
+.outputSection {
+  padding: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.outputTitle {
+  color: #000;
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+}
+
+/* Browser frame */
+.browser {
+  width: 100%;
+  height: 70%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: white;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 5px rgba(0, 0, 0, 0.5));
+  flex-grow: 1;
+  transition: all 0.3s ease;
+}
+
+/* Console */
+.console {
+  background: #000;
+  color: #0f0;
+  padding: 10px;
+  height: 20%;
+  overflow-y: auto;
+  border-radius: 5px;
+  font-family: monospace;
+  transition: all 0.3s ease;
+}
+
+.consoleTitle {
+  color: #04aa6d;
+}
+
+.consoleEmpty {
+  color: #777;
+}
+
+/* 📱 MOBILE RESPONSIVE */
+@media (max-width: 900px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+  }
+
+  .editorSection {
+    order: 1;
+    padding: 15px;
+  }
+
+  .outputSection {
+    order: 2;
+    padding: 15px;
+    background: #f8f8f8;
+  }
+
+  .outputTitle {
+    font-size: 1.2rem;
+  }
+
+  .browser {
+    height: 300px;
+  }
+
+  .console {
+    height: auto;
+    max-height: 200px;
+  }
+
+  .runButton {
+    align-self: stretch;
+    text-align: center;
+  }
+}
+
+/* 🪄 EXTRA SMALL DEVICES */
+@media (max-width: 500px) {
+  .tabs button {
+    font-size: 0.8rem;
+    padding: 8px;
+  }
+
+  .editorTitle,
+  .outputTitle {
+    font-size: 1rem;
+  }
+
+  .browser {
+    height: 250px;
+  }
+}
+@media (max-width: 400px) {
+  .runButton {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+}

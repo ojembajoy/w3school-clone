@@ -1,22 +1,25 @@
 import React from "react";
 import styles from "./Footer.module.css";
+import { NavLink } from "react-router-dom";
+import { } from "framer-motion/client";
+
+
 
 
 // updated footer
 const Footer = () => {
     return (
         <footer className={styles.footer}> 
-            <p>&copy; 2025 W3Schools Clone. All rights reserved.</p>
+            <p>&copy; 2025 NjSchools.com.ng | All rights reserved By OJEMBA JOY NKECHI.</p>
             <div className={styles.links}>
-                <a href="#">Privacy</a>
-                <a href="#">Terms</a>
-                <a href="#">Contact</a>
+                <li><NavLink to='/privacy'>Privacy</NavLink></li>
+                <li><NavLink to='/terms'>Terms</NavLink></li>
             </div>
 
             <ul className={styles.links}>
-                 <li> <a href="/introduction">Introduction</a></li>
-                 <li> <a href="/elements"> Elements</a></li>
-                 <li> <a href="/attributes"> Attributes</a></li>
+                 <li> <NavLink to="/introduction">Introduction</NavLink></li>
+                 <li> <NavLink to="/elements"> Elements</NavLink></li>
+                 <li> <NavLink to='/attributes'> Attributes</NavLink></li>
                 </ul> 
         </footer>
     );
